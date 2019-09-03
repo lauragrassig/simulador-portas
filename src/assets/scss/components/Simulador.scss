@@ -1,0 +1,421 @@
+.main-wrapper {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.viewport {
+  height: auto;
+}
+
+.panel {
+  background-color: gray;
+  width: 100%;
+  padding-top: 52%;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.wall {
+  background-image: url("../images/parede2.png");
+  background-size: cover;
+  width: 100% ;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  &:hover {
+    filter: drop-shadow(0 0px 1px blue);
+  }
+  @media #{$landscape} {
+    width: 120%;
+  }
+}
+
+.marco {
+  background-color: black;
+  height: 65%;
+  width: 17%;
+  position: absolute;
+  left: 15%;
+  bottom: 17%;
+  background-image: url("../images/aro.png");
+  background-size: cover;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  &:hover {
+    filter: drop-shadow(0 0px 1px blue);
+  }
+}
+
+.door {
+  background-image: url("../images/folha-porta.png");
+  position: relative;
+  height: 96%;
+  width: 82%;
+  background-size: cover;
+  top: 49.7%;
+  left: 50%;
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -47.6%);
+  transform: translate(-50%, -47.6%);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.4);
+  &:hover {
+    filter: drop-shadow(0 0px 1px blue);
+  }
+}
+
+.floor {
+  background-image: url("../images/chao3.png");
+  width: 100%;
+  background-repeat: repeat;
+  position: relative;
+  height: 9.9%;
+  bottom: 0;
+  top: 82.9%;
+  z-index: 2;
+  cursor: pointer;
+  background-size: cover;
+  @media #{$landscape} {
+    width: 120%;
+    height: 18%;
+  }
+}
+
+.knob {
+  transform: translateY(50%);
+  background-image: url("../images/macaneta.png");
+  width: 18%;
+  height: 12%;
+  top: -50%;
+  position: relative;
+  background-size: cover;
+  left: 10%;
+  cursor: pointer;
+  filter: drop-shadow(0px 3px 4px black);
+  &:hover {
+    outline: 2px solid rgba(21, 21, 121, 0.5);
+  }
+}
+
+.footer {
+  background-image: url("../images/rodape2.png");
+  width: 100%;
+  height: 5%;
+  background-size: contain;
+  position: relative;
+  top: 68.1%;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.4);
+  z-index: 3;
+  &:hover {
+    filter: drop-shadow(0 0px 1px blue);
+  }
+  @media #{$landscape} {
+    width: 120%;
+    top: 60.1%;
+  }
+}
+
+.object {
+  background-image: url("../images/sofa1.png");
+  width: 57%;
+  height: 100%;
+  top: -4.5%;
+  position: absolute;
+  left: 36%;
+  z-index: 4;
+  background-size: cover;
+  cursor: pointer;
+  &:hover {
+    outline: 2px solid #090967;
+  }
+}
+
+.back {
+  background: rgba(0, 0, 0, 0.7);
+  height: 2rem;
+  width: 3rem;
+  z-index: 9999;
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  border-radius: 0.5rem;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+  &:hover {
+    background: rgba(0,0,0,0.3);
+  }
+  > img { width: 50%; }
+}
+
+.chosen {
+  &:before {
+    content: '';
+    width: 8px;
+    height: 15px;
+    border: solid #ffffff;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 25%;
+    z-index: 99;
+  }
+  &:after {
+    content: '';
+    height: 3rem;
+    background: rgba(113, 115, 114, 0.4);
+    position: absolute;
+    border-radius: 4rem;
+    border: 1px solid #fdfdfd;
+    width: 3rem;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+
+//*~ Simulator Nav
+.section-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.Navigator {
+  height: 100% !important;
+}
+
+.menu-simulator {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 10;
+  .dobradica { width: 1.6rem !important; }
+  .simulator-menu-itens {
+    background: #101031;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 1rem 0rem 1rem;
+    border-top: 1px solid #62658a;
+    overflow-x: scroll;
+    width: 100%;
+    height: 100%;
+    > .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1 0 15%;
+      transition: 0.3s ease;
+      &:hover { filter: opacity(0.3) drop-shadow(0 0 0 #03ff0e); cursor: pointer; }
+      &.is-active { filter: opacity(0.3) drop-shadow(0 0 0 #03ff0e); }
+      @media #{$device-g-lg} { flex: 1 0 10%; }
+      > img { width: 1.5rem; }
+      > p { font-size: 0.6rem; color: $c-e-white; font-weight: 800; }
+      }
+    }
+  }
+  .list-simulator-options  {
+    background: rgba(16, 16, 49, 0.5);
+    padding: 0.5rem;
+    height: 4rem;
+    top: 100%;
+    transition: 0.5s ease;
+    &.is-active { transform: translateY(-100%); 
+    }
+    .options {
+      height: 5rem;
+      width: 100%;
+      display: flex;
+      overflow-x: auto;
+    }
+    .type {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100%;
+      margin: 0 0.6rem;
+      flex-direction: column;
+      font-size: 0.6rem;
+      color: white;
+      width: 6rem;
+      text-align: center;
+      p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 5rem;
+      }
+      > img { 
+        width: 3rem;
+        height: 3rem;
+        border-radius: 3rem;
+        margin: 0px 0.2rem;
+        background:  $c-v-n-grey;
+      }
+    }
+  }
+  
+  .list-atributos {
+    position: absolute;
+    left: 0;
+    width: 7rem;
+    background: rgba(0,0,0,0.5);
+    transition: 0.5s ease;
+    opacity: 0;
+    height: 20rem;
+    bottom: 100%;
+    transform: translate(-100%, -53%);
+    &.-active {
+      opacity: 1;
+      transform: translate(0%, -53%);
+    }
+    .options {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      overflow: auto;
+      height: 100%;
+      flex-direction: column;
+      .opt {
+        margin: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+        img {
+          width: 3rem;
+          height: 3rem;
+          border-radius: 2rem;
+        }
+        .desc {
+          font-size: 0.6rem;
+          text-align: center;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 4rem;
+          color: white;
+        }
+      }
+    }
+  }
+//*~ Simulator Nav - IS MOBILE
+@media #{$landscape} {
+  .menu-simulator.is-mobile {
+    top: 0;
+    width: 10%;
+    height: 100%;
+    right: 0;
+    .menu-simulator {
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 15%;
+    }
+    > nav {
+      height: 100%;
+    }
+    .simulator-menu-itens {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      border: none;
+      border-left: 0.5px solid white;
+      .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1 0 20%;
+        > img {
+          width: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media #{$landscape} {
+  .is-mobile >.list-simulator-options {
+    height: 100%;
+    width: 14%;
+    top: 0;
+    position: fixed;
+    right: 0;
+    &.is-active { transform: translateX(-100%); }
+    .options {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .type {
+      display: flex;
+      flex-direction: column;
+      height: 20%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex: 1 0 25%;
+    }
+  }
+}
+
+@media #{$landscape} {
+  .is-mobile >.list-atributos {
+    left: -100%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    transition: 0.5s ease;
+    opacity: 0;
+    height: 100%;
+    bottom: 0;
+    transform: translate(-154%, 100%);
+    &.-active {
+      opacity: 1;
+      transform: translate(-154%, -0%);
+    }
+    .options {
+      display: flex;
+      justify-content: space-between;
+      overflow: auto;
+      height: 100%;
+      flex-direction: column;
+      .opt {
+        position: relative;
+        margin: .5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        left: 0;
+      }
+    }
+  }
+}

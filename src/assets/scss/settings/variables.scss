@@ -1,0 +1,201 @@
+/* --------------------- COLORS --------------------- */
+/* G E T  I T :
+  c: color; p: primary; bg: background;
+  a: auxiliar; i: icon; t: theme; ac: active;
+  bt: button; h: hover; l: link;
+  v: variate; s: soft; n: normal; h: hard;
+*/
+
+//*~ primary
+$c-p:       #4FA046;
+$c-p-bg:    #ffffff;
+
+//*~ aux
+$c-a:       #01579B;
+
+//*~ icon
+$c-i:  #C6C5C5;
+$c-i-ac: #4FA046;
+
+//*~ buttons
+$c-p-bt:    #4FA046;
+$c-p-bt-h:  #70bd68;
+
+//*~ colors variate
+  //black
+  $c-v-s-black: #3a3a3a;
+  $c-v-n-black: rgba(0, 0, 0, 0.59);
+  $c-v-h-black: #232323;
+
+  //green
+  $c-v-s-green: #739864;
+  $c-v-n-green: #195600;
+  $c-v-h-green: #0d2902;
+
+  //blue
+  $c-v-s-blue: #6aaad0;
+  $c-v-n-blue: #116ea5;
+  $c-v-h-blue: #043c5d;
+
+  //red
+  $c-v-s-red: #b34f4f;
+  $c-v-n-red: #941010;
+  $c-v-h-red: #630404;
+
+  //grey
+  $c-v-s-grey: #E4E4E4;
+  $c-v-n-grey: #C6C5C5;
+  $c-v-h-grey: #BEBEBE;
+  
+//*~ links
+$c-l:  #4FA046;
+
+/*~~  e: essentials; st: states;  ~~*/
+
+//*~ essentials
+$c-e-black:   #000000;
+$c-e-white:   #ffffff;
+$c-e-red:     #ff0000;
+$c-e-blue:    #0000ff;
+$c-e-green:   #008000;
+$c-e-gray:    #808080;
+$c-e-silver:  #C0C0C0;
+$c-e-yellow:  #FFFF00;
+$c-e-maroon:  #800000;
+$c-e-purple:  #800080;
+$c-e-fuchsia: #FF00FF;
+$c-e-teal:    #008080;
+$c-e-aqua:    #00FFFF;
+
+//*~ states
+$c-st-positive: #127221;
+$c-st-negative: #f52d23;
+$c-st-warning:  #e2c13d;
+
+/* --------------------- Z-INDEX --------------------- */
+//*~ default
+$z-default:  auto;
+$z-dropdown: 1000;
+$z-fixed:    1020;
+$z-modal:    1040;
+$z-popover:  1060;
+$z-overlay:  1070;
+$z-sidenav:  1080;
+$z-loader:   1090;
+
+//*~ generic
+$z-0: 9;
+$z-1: 99;
+$z-2: 999;
+$z-3: 9999;
+$z-4: 99999;
+
+/* --------------------- SIZES --------------------- */
+//*~ xs
+$s-xs-xs: .3rem;
+$s-xs-sm: .5rem;
+$s-xs-md: .7rem;
+$s-xs-lg:  1rem;
+
+//*~ small
+$s-sm-xs: 1.3rem;
+$s-sm-sm: 1.5rem;
+$s-sm-md: 1.7rem;
+$s-sm-lg: 2rem;
+
+//*~ medium
+$s-md-xs: 2.3rem;
+$s-md-sm: 2.5rem;
+$s-md-md: 2.7rem;
+$s-md-lg: 3rem;
+
+//*~ lg
+$s-lg-xs: 3.3rem;
+$s-lg-sm: 3.5rem;
+$s-lg-md: 3.4rem;
+$s-lg-lg: 4rem;
+
+//*~ generic
+$s-g-xs:  4.5rem;
+$s-g-sm:  5rem;
+$s-g-md:  7rem;
+$s-g-lg:  10rem;
+
+
+/* --------------------- BREAKPOINTS --------------------- */
+
+/* ----------- 1. MOBILE PHONE ----------- */
+  //*~ small
+  $device-m-sm:    "only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation: portrait)";
+  $device-m-sm-ls: "only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation: landscape)";
+
+  //*~ medium
+  $device-m-md:    "only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)";
+  $device-m-md-ls: "only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)";
+
+  //*~ large
+  $device-m-lg:    "only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2)";
+  $device-m-lg-ls: "only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2)";
+
+/* ----------- 2. TABLET ----------- */
+  //*~ small
+  $device-t-sm:    "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1)";
+  $device-t-sm-ls: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)";
+
+  //*~ medium
+  $device-t-md:    "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2)";
+  $device-t-md-ls: "only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2)";
+
+  //*~ large
+  $device-t-lg:    "only screen and (min-device-width: 834px) and (max-device-width: 1112px) and (-webkit-min-device-pixel-ratio: 2)";
+
+/* ----------- 3. DESKTOP ----------- */
+  //*~  non-retina screen
+  $device-d:       "screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1)";
+
+  //*~  retina screen
+  $device-d-r:     "screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi)";
+
+/* ----------- 4. GENERIC ----------- */
+  $device-g-sm:   "only screen and (max-device-width : 500px)";
+  $device-g-md:   "only screen and (min-width: 600px)";
+  $device-g-lg:   "only screen and (min-device-width : 1023px)";
+  $landscape:     "(orientation:landscape)";
+  $device-g-xs:   "only screen and (max-device-width : 330px)";
+  $device-g-mobile: "only screen and (min-device-width : 420px)";
+
+/* --------------------- FONTE SIZE  --------------------- */
+//*~ xs
+$fz-xs:   0.5rem;
+
+//*~ sm
+$fz-sm:   1rem;
+$fz-sm-a: 1.5rem;
+
+//*~ md
+$fz-md:   2rem;
+$fz-md-a: 2.5rem;
+
+//*~ lg
+$fz-lg:   3rem;
+$fz-lg-a: 3.5rem;
+
+//*~ generic
+$fz-g-xs: 4rem;
+$fz-g-sm: 4.5rem;
+$fz-g-md: 5rem;
+$fz-g-lg: 5.5rem;
+$fz-g-xs-xs: 0.9rem;
+$fz-g-md-md: 2.2rem;
+
+/* --------------------- FONTE FAMILY  --------------------- */
+//*~ title
+$ff-t-d: 'Montserrat', sans-serif;
+$ff-t-a: 'Raleway', sans-serif;
+
+//*~ text
+$ff-p-d: 'Istok Web', sans-serif;
+$ff-p-a: 'Frutiger LT Std Ligth', sans-serif;
+
+//*~ generic
+$ff-g:   'Raleway', sans-serif;

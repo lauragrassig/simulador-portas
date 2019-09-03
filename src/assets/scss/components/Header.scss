@@ -1,0 +1,20 @@
+header {
+  color: white;
+  position: absolute;
+  top: 0;
+  font-size: 0.7rem;
+  width: 100.1%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, #171b38 0%, #101031 50%, #181b38 100%);
+  text-transform: uppercase;
+  height: 3rem;
+  align-items: center;
+  z-index: 2;
+  border-bottom: 1px solid #62658a;
+  .titulo {
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}

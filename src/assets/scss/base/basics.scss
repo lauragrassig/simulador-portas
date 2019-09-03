@@ -1,0 +1,43 @@
+*{
+  &:not(input), &:not(button), &:not(select), &:not(textarea){
+    -webkit-user-select: none; /* disable selection/Copy of UIWebView */
+    -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
+    user-select: none;
+  }
+}
+input:not([type="button"]), textarea{
+  -webkit-user-select: text;
+}
+
+html {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+p{ margin-bottom: 0; }
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+
+.fa, .fas{
+  color: $c-i;
+}
+
+button{
+  padding: 0;
+}
+
+button:focus, :focus{
+  outline: none;
+  border: none;
+}
