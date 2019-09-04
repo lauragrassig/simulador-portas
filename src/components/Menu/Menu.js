@@ -27,14 +27,13 @@ class Menu extends Component {
           <nav className="Navigator">
             <ul className="simulator-menu-itens">
               <li className="item" onClick={this.toggle.bind(this)}>{this.state.addClass}
-                <img src={require('../../assets/images/aro.png')} />
+                <img src={require('../../assets/images/marcos.png')} />
                 <p>Textura</p>
               </li>
             </ul>
           </nav>
         </div>
       </section>
-      // <div className={boxClass.join(' ')} onClick={this.toggle.bind(this)}>{this.state.addClass} 'teste' </div> 
     )
   }
 }

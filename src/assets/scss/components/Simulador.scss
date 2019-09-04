@@ -233,7 +233,7 @@ body::-webkit-scrollbar {
       &:hover { filter: opacity(0.3) drop-shadow(0 0 0 #03ff0e); cursor: pointer; }
       &.is-active { filter: opacity(0.3) drop-shadow(0 0 0 #03ff0e); }
       @media #{$device-g-lg} { flex: 1 0 10%; }
-      > img { width: 2rem; border-radius: 2rem; height: 2rem; }
+      > img { width: 1.5rem; }
       > p { font-size: 0.6rem; color: $c-e-white; font-weight: 800; }
       }
     }
