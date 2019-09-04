@@ -210,16 +210,16 @@ body::-webkit-scrollbar {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   z-index: 10;
   .dobradica { width: 1.6rem !important; }
   .simulator-menu-itens {
-    background: #101031;
+    background: #bd5879;
     display: flex;
     justify-content: space-between;
     list-style: none;
     padding: 1rem 0rem 1rem;
-    border-top: 1px solid #62658a;
+    border-top: 2px solid #31081e;
     overflow-x: scroll;
     width: 100%;
     height: 100%;
@@ -233,7 +233,7 @@ body::-webkit-scrollbar {
       &:hover { filter: opacity(0.3) drop-shadow(0 0 0 #03ff0e); cursor: pointer; }
       &.is-active { filter: opacity(0.3) drop-shadow(0 0 0 #03ff0e); }
       @media #{$device-g-lg} { flex: 1 0 10%; }
-      > img { width: 1.5rem; }
+      > img { width: 2rem; border-radius: 2rem; height: 2rem; }
       > p { font-size: 0.6rem; color: $c-e-white; font-weight: 800; }
       }
     }
