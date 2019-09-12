@@ -241,7 +241,7 @@ body::-webkit-scrollbar {
   .list-simulator-options  {
     background: rgba(16, 16, 49, 0.5);
     padding: 0.5rem;
-    height: 4rem;
+    height: 5rem;
     top: 100%;
     transition: 0.5s ease;
     &.is-active { transform: translateY(-100%); 

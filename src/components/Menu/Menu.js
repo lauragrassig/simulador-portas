@@ -13,15 +13,23 @@ class Menu extends Component {
   }
 
   render () {
-    let boxMenu = ["list-simulator-options", "type-opt"];
+    let boxMenu = ["list-simulator-options"];
     if(this.state.addClass) {
       boxMenu.push('is-active');
     }
     return (
       <section className="section-menu">
         <div className={boxMenu.join(' ')}>
-          <div className="options">
-          </div>
+          {/* <div className="list-simulator-options"> */}
+            <div className="options">
+              <div className="type">
+                <img src={require('../../assets/images/aro.png')} />
+              </div>
+              <div className="type">
+                <img src={require('../../assets/images/aro.png')} />
+              </div>
+            </div>
+          {/* </div> */}
         </div>
         <div className="menu-simulator">
           <nav className="Navigator">
